@@ -1,5 +1,6 @@
 import Contato from './components/Contato'
 import Hero from './components/Hero'
+import ScrollToTop from './components/ScrollToTop'
 import Sobre from './components/Sobre'
 
 export default function App() {
@@ -8,6 +9,7 @@ export default function App() {
       <Hero />
       <Sobre />
       <Contato />
+      <ScrollToTop />
     </div>
   )
 }
