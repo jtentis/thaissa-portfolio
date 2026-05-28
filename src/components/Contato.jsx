@@ -18,7 +18,7 @@ export default function Contato() {
               <circle cx="12" cy="12" r="4.2" />
               <circle cx="17.2" cy="6.8" r="1.1" />
             </svg>
-            <span>@thatentis</span>
+            <span>thatentis</span>
           </a>
 
           <a href="https://wa.me/5521968702369" target="_blank" rel="noreferrer">
