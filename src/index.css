@@ -1,0 +1,319 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: "Brown Sugar";
+  src: url("/fonts/brown-sugar/Brown%20Sugar%20.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@theme {
+  --color-olive: #747a5b;
+  --color-cream: #ead8b6;
+  --font-heading: "Brown Sugar", "Bodoni 72", "Bodoni MT", Didot, "Times New Roman", serif;
+  --font-body: "Antic Didone", "Times New Roman", serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  background: #747a5b;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  color: inherit;
+}
+
+.section-frame {
+  position: relative;
+  width: 100%;
+  min-height: 100svh;
+  overflow: hidden;
+}
+
+.font-heading {
+  font-family: var(--font-heading);
+  font-weight: 400;
+}
+
+.font-body {
+  font-family: var(--font-body);
+  font-weight: 400;
+}
+
+.hero-section {
+  display: grid;
+  grid-template-columns: minmax(0, 1.08fr) minmax(0, 1fr);
+  align-items: end;
+  padding: clamp(2rem, 5vw, 6.1rem) clamp(1.5rem, 10.5vw, 13.6rem);
+}
+
+.hero-left {
+  position: relative;
+  z-index: 1;
+  align-self: end;
+  padding-bottom: clamp(1.2rem, 5.2vh, 4.4rem);
+}
+
+.hero-kicker {
+  margin: 0 0 -0.18em;
+  font-size: clamp(1.35rem, 2.15vw, 2.55rem);
+  line-height: 1;
+  color: #ead8b6;
+}
+
+.hero-title {
+  margin: 0;
+  color: #ead8b6;
+  font-size: clamp(8rem, 18vw, 18.9rem);
+  line-height: 0.83;
+  letter-spacing: 0;
+}
+
+.hero-title span {
+  display: block;
+}
+
+.hero-photo {
+  position: absolute;
+  z-index: 2;
+  left: 25%;
+  /* right: 50%; */
+  bottom: -.5%;
+  width: min(55vw, 55rem);
+  height: auto;
+  pointer-events: none;
+  user-select: none;
+}
+
+.hero-copy {
+  z-index: 3;
+  align-self: start;
+  justify-self: end;
+  width: min(32vw, 41rem);
+  padding-top: clamp(2rem, 8.2vh, 7.6rem);
+  padding-left: clamp(.5rem, 5vw, 6rem);
+  color: #ead8b6;
+}
+
+.hero-copy p {
+  margin: 0;
+  font-size: clamp(1.30rem, 2.32vw, 2.5rem);
+  line-height: 1;
+}
+
+.hero-copy p + p {
+  margin-top: clamp(3.1rem, 8.4vh, 6.4rem);
+}
+
+.about-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: clamp(4rem, 11vh, 9.3rem) clamp(1.5rem, 9vw, 12rem);
+}
+
+.about-title {
+  margin: 0;
+  color: #747a5b;
+  font-size: clamp(4.4rem, 9.2vw, 9.6rem);
+  line-height: 0.9;
+}
+
+.about-copy {
+  width: min(74.5rem, 73vw);
+  margin-top: clamp(3.8rem, 12vh, 8.6rem);
+  color: #747a5b;
+  z-index: 1;
+}
+
+.about-copy p {
+  margin: 0;
+  font-size: clamp(1.8rem, 2.55vw, 3.15rem);
+  line-height: 1.33;
+}
+
+.about-copy p + p {
+  margin-top: clamp(3rem, 8.7vh, 6.2rem);
+}
+
+.leaf {
+  position: absolute;
+  right: clamp(2rem, 5.2vw, 6.4rem);
+  bottom: clamp(1rem, 1vh, 1rem);
+  width: min(21vw, 26rem);
+  height: auto;
+  pointer-events: none;
+  user-select: none;
+  opacity: .65;
+}
+
+.contact-section {
+  min-height: 100svh;
+  padding: clamp(4rem, 11.4vh, 8.7rem) clamp(1.5rem, 19vw, 24rem);
+}
+
+.contact-content {
+  position: relative;
+  z-index: 2;
+}
+
+.contact-title {
+  margin: 0;
+  color: #ead8b6;
+  font-size: clamp(4rem, 8vw, 8.9rem);
+  line-height: 0.96;
+  white-space: nowrap;
+}
+
+.contact-copy {
+  width: min(59rem, 59vw);
+  margin: clamp(4.5rem, 16.5vh, 10.7rem) 0 0;
+  color: #ead8b6;
+  font-size: clamp(1.7rem, 2.58vw, 3.15rem);
+  line-height: 1.28;
+}
+
+.contact-links {
+  display: grid;
+  gap: 1.3rem;
+  margin-top: clamp(4rem, 11vh, 7.8rem);
+  color: #ead8b6;
+  font-size: clamp(1.55rem, 2.08vw, 2.55rem);
+  line-height: 1;
+}
+
+.contact-links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 1.35rem;
+  width: fit-content;
+  text-decoration-thickness: 0.055em;
+  text-underline-offset: 0.14em;
+  transition: opacity 180ms ease;
+}
+
+.contact-links a:hover {
+  opacity: 0.78;
+}
+
+.contact-links svg {
+  width: clamp(2.3rem, 3vw, 3.45rem);
+  height: clamp(2.3rem, 3vw, 3.45rem);
+  flex: 0 0 auto;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.5;
+}
+
+.contact-links a:last-child svg {
+  fill: currentColor;
+  stroke: none;
+}
+
+.contact-wave {
+  position: absolute;
+  z-index: 1;
+  inset: auto 0 0 auto;
+  width: min(140vw, 90rem);
+  height: min(55vw, 68rem);
+  background: url("/wave.png") right bottom / contain no-repeat;
+  pointer-events: none;
+  opacity: .6;
+}
+
+@media (max-width: 900px) {
+  .hero-section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    min-height: 100svh;
+    padding: 2.3rem 1.35rem 0;
+  }
+
+  .hero-left {
+    padding-bottom: 0;
+  }
+
+  .hero-title {
+    font-size: clamp(6.4rem, 34vw, 11rem);
+  }
+
+  .hero-photo {
+    left: 9%;
+    bottom: -1.5%;
+    width: 88vw;
+  }
+
+  .hero-copy {
+    width: min(28rem, 75vw);
+    margin-left: auto;
+    padding-top: 1.5rem;
+  }
+
+  .hero-copy p {
+    font-size: clamp(1.45rem, 7vw, 2.4rem);
+  }
+
+  .hero-copy p + p {
+    margin-top: 1.6rem;
+  }
+
+  .about-section,
+  .contact-section {
+    padding: 4.5rem 1.35rem;
+  }
+
+  .about-copy,
+  .contact-copy {
+    width: 100%;
+  }
+
+  .about-copy {
+    margin-top: 4rem;
+  }
+
+  .about-copy p,
+  .contact-copy {
+    font-size: clamp(1.55rem, 7vw, 2.4rem);
+  }
+
+  .leaf {
+    width: 52vw;
+    right: -6vw;
+    bottom: 2.4rem;
+    opacity: 0.75;
+  }
+
+  .contact-title {
+    white-space: normal;
+  }
+
+  .contact-copy {
+    margin-top: 4.5rem;
+  }
+
+  .contact-links {
+    margin-top: 4.5rem;
+  }
+
+  .contact-wave {
+    width: 140vw;
+    height: 88vw;
+    right: -1vw;
+    bottom: -10vw;
+  }
+}
