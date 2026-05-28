@@ -1,6 +1,6 @@
+import Contato from './components/Contato'
 import Hero from './components/Hero'
 import Sobre from './components/Sobre'
-import Contato from './components/Contato'
 
 export default function App() {
   return (

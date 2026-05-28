@@ -22,6 +22,11 @@
 html {
   scroll-behavior: smooth;
   background: #747a5b;
+  /* scroll-padding-bottom: 100px; */
+}
+
+section {
+  scroll-margin-top: 70px;
 }
 
 body {
@@ -65,6 +70,7 @@ a {
   z-index: 1;
   align-self: end;
   padding-bottom: clamp(1.2rem, 5.2vh, 4.4rem);
+  padding-left: 50px
 }
 
 .hero-kicker {
@@ -78,7 +84,7 @@ a {
   margin: 0;
   color: #ead8b6;
   font-size: clamp(8rem, 18vw, 18.9rem);
-  line-height: 0.83;
+  line-height: 0.80;
   letter-spacing: 0;
 }
 
@@ -89,10 +95,10 @@ a {
 .hero-photo {
   position: absolute;
   z-index: 2;
-  left: 25%;
-  /* right: 50%; */
-  bottom: -.5%;
-  width: min(55vw, 55rem);
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  width: min(60vw, 60rem);
   height: auto;
   pointer-events: none;
   user-select: none;
@@ -234,8 +240,46 @@ a {
   opacity: .6;
 }
 
+.hero-nav{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  align-self: start;
+  justify-content: center;
+  padding: 1.5rem clamp(1.5rem, 10vw, 12rem);
+}
+
+.hero-nav-link{
+  color: #ead8b6;
+  font-size: clamp(1rem, 2vw, 2rem);
+  line-height: 1;
+  text-decoration-thickness: 0.055em;
+  text-underline-offset: 0.14em;
+  transition: opacity 180ms ease;
+}
+
+.hero-nav-list li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+li:not(:last-child)::after {
+  content: "·";
+  font-size: 5em;
+  line-height: 0;
+  margin: 0 1rem;
+  padding-top: 0.5rem;
+}
+
+.hero-nav-link:hover {
+  opacity: 0.78;
+}
+
 @media (max-width: 900px) {
-  .hero-section {
+.hero-section {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -253,8 +297,9 @@ a {
   }
 
   .hero-photo {
-    left: 9%;
-    bottom: -1.5%;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
     width: 88vw;
   }
 
