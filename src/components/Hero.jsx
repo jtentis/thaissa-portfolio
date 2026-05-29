@@ -29,7 +29,7 @@ export default function Hero() {
         </h1>
       </div>
 
-      <img className="hero-photo animate animate-d4" src="/foto.png" alt="Thaissa sorrindo ao lado de uma árvore" />
+      <img className="hero-photo animate animate-d4" src="/foto.png?v=2" alt="Thaissa sorrindo" />
 
       <div className="hero-copy font-body animate animate-d5">
         <p>Muito prazer, sou Thaissa - designer visual.</p>
