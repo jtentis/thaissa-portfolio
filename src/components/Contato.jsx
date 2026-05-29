@@ -30,7 +30,7 @@ export default function Contato() {
         </div>
       </div>
 
-      <div className="contact-wave animate animate-d5" aria-hidden="true" />
+      <div className="contact-wave" aria-hidden="true" />
     </footer>
   )
 }

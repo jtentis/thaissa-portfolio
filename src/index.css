@@ -25,13 +25,15 @@
     transform: translateY(30px);
   }
   to {
-    opacity: 1;
+    opacity: var(--target-opacity, 1); 
+    /* transform: translateY(0);  */
   }
 }
 
 .animate {
   opacity: 0;
   transform: translateY(30px);
+  will-change: opacity, transform; 
 }
 
 .animate.in-view {
@@ -47,7 +49,6 @@
 html {
   scroll-behavior: smooth;
   background: #747a5b;
-  /* scroll-padding-bottom: 100px; */
 }
 
 section {
@@ -123,7 +124,7 @@ a {
   left: 50%;
   bottom: 0;
   transform: translateX(-50%);
-  width: min(60vw, 60rem);
+  width: min(43vw, 43rem);
   height: auto;
   pointer-events: none;
   user-select: none;
@@ -308,15 +309,25 @@ li:not(:last-child)::after {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: start;
+    justify-content: flex-start;
     min-height: 100svh;
-    padding: 0 1.35rem;
+    padding: 0 1.35rem 0;
     text-align: center;
+    gap: 2.5rem;
   }
 
   .hero-nav {
     position: relative;
-    padding: 0.5rem 0;
+    order: 1;
+    width: 100%;
+    padding: 1.5rem 0 0;
+    display: flex;
+    justify-content: center;
+  }
+
+  .hero-nav-list {
+    width: 100%;
+    justify-content: center;
   }
 
   .hero-nav-link {
@@ -332,7 +343,9 @@ li:not(:last-child)::after {
   }
 
   .hero-left {
-    padding: 1rem 0 0;
+    position: relative;
+    order: 2;
+    padding: 0;
     align-self: center;
   }
 
@@ -346,18 +359,12 @@ li:not(:last-child)::after {
     text-align: center;
   }
 
-  .hero-photo {
-    left: 50%;
-    bottom: 0;
-    transform: translateX(-50%);
-    width: min(100vw, 50rem);
-    z-index: 999;
-  }
-
   .hero-copy {
+    position: relative;
+    order: 3;
     width: 100%;
     margin-left: 0;
-    padding: 0.75rem 0 0;
+    padding: 0;
   }
 
   .hero-copy p {
@@ -368,12 +375,25 @@ li:not(:last-child)::after {
     margin-top: 0.75rem;
   }
 
+  .hero-photo {
+    position: relative;
+    order: 4;
+    width: 100%;
+    max-width: 26rem;
+    height: auto;
+    margin-top: auto;
+    left: auto;
+    bottom: auto;
+    transform: none;
+    pointer-events: none;
+  }
+
   .about-section {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 2rem 1.35rem;
+    padding: 4rem 1.35rem;
     text-align: center;
   }
 
@@ -407,7 +427,7 @@ li:not(:last-child)::after {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 2rem 1.35rem;
+    padding: 4rem 1.35rem;
     text-align: center;
   }
 

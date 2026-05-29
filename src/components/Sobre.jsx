@@ -18,7 +18,7 @@ export default function Sobre() {
         </p>
       </div>
 
-      <img className="leaf animate animate-d4" src="/folha.png" alt="" aria-hidden="true" />
+      <img className="leaf" src="/folha.png" alt="" aria-hidden="true" />
     </section>
   )
 }
